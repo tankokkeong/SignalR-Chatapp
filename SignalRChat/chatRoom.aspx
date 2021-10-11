@@ -24,8 +24,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="chat-container">
         <div class="mt-3 mb-3">
-            <div class="bg-dark text-light text-center p-2 mb-3">
-                <h3>Chat Records</h3> 
+            <div class="bg-dark text-light text-center p-2 mb-3 rounded">
+                <h3 class="mb-0">Chat Records</h3> 
             </div>
              <asp:Literal ID="ltrDiscussion" runat="server"></asp:Literal>
         </div>
@@ -73,12 +73,12 @@
 
             if (name_input === name) {
                 // Add the message to the page. 
-                $('#discussion').append('<li><strong>(You) ' + encodedName + "[" + sent_time + "]"
+                $('#discussion').append('<li><strong>(You) ' + encodedName + " [" + sent_time + "]"
                     + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
             }
             else {
                 // Add the message to the page. 
-                $('#discussion').append('<li><strong>' + encodedName + "[" + sent_time + "]"
+                $('#discussion').append('<li><strong>' + encodedName + " [" + sent_time + "]"
                     + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
             }
 
